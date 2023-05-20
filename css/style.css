@@ -260,7 +260,8 @@ main{
     width: 100%;
     display: grid;
     grid-template-columns: 
-        repeat(auto-fit, minmax(350px, 1fr));
+        repeat(auto-fit, minmax(300px, 1fr));
+    place-items: center;
     gap: 1rem;
     margin-bottom: 1.75rem;
 }
@@ -362,18 +363,20 @@ textarea:focus{
 
 footer{
     background-color: #181818;
-    padding: 2.5rem 4.5rem;
+    padding: 2.5rem 0 0;
+    overflow: hidden;
+}
 
-    /* display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; */
-
-    /* grid-template-columns: auto 1fr auto; */
+.footer-container{
+    padding: 0 1.5rem;
     display: grid;
-    grid-template-columns: 
-        repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem 1rem;
+    grid-template-columns: repeat(2, 50%);
+    place-items: center;
+    gap: 1rem;
+}
+
+.footer-contato{
+    align-self: start;
 }
 
 .footer-contato > h4{
@@ -383,6 +386,7 @@ footer{
 .footer-logo{
     display: flex;
     align-items: center;
+    margin-top: 1rem;
 }
 
 .footer-logo > .logo{
@@ -421,6 +425,18 @@ footer{
     text-decoration: underline;
     text-decoration-color: #b39c1a;
     text-decoration-thickness: 2px;
+}
+
+.copyright{
+    background: #292929;
+    text-align: center;
+}
+
+.copyright > p{
+    font-weight: 400;
+    margin: 0;
+    padding: .75rem 0;
+    min-width: 100vw;
 }
 
 /* botão voltar ao topo */
@@ -525,13 +541,17 @@ footer{
 
     /* hero section */
     #hero{
-        min-height: 100dvh;
+        min-height: 100vh;
     }    
 
     .hero-container{
         padding: 2rem;
         grid-template-columns: 1fr;
         gap: 0;
+    }
+
+    .titulo-container{
+        padding-top: 1rem;
     }
 
     .titulo-container > h1{
@@ -543,7 +563,8 @@ footer{
     }
 
     .titulo-container > p{
-        font-size: .75rem;
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
     }
 
     .img-container > img{
@@ -552,18 +573,115 @@ footer{
 
     /* main section */
     main{
-        margin: 0 2rem
+        margin: 0 1.5rem
     }
 
     /* sobre section */
     #sobre{
         display: flex;
         flex-direction: column-reverse;
+        padding: 1rem 1.5rem;
+
     }
     .sobre-img > img{
         min-width: 100%;
     }
     .sobre-conteudo{
         margin-top: -1rem;
+    }
+
+    .sobre-conteudo > span{
+        font-size: .75rem;
+        letter-spacing: 2px;
+    }
+
+    .sobre-conteudo > h2{
+        font-size: 1.75rem;
+    }
+
+    .sobre-conteudo > p{
+        font-size: .75rem;
+    }
+
+    /* servicos section */
+    #servicos{
+        margin-top: 0;
+    }
+
+    #servicos > span{
+        font-size: .75rem;
+        letter-spacing: 2px;
+    }
+    #servicos > h2{
+        font-size: 1.75rem;
+    }
+
+    .logo-servicos{
+        opacity: .3;
+        left: 45%;
+    }
+
+    .card h3{
+        font-size: 1.25rem;
+    }
+
+    .card p{
+        font-size: .75rem;
+    }
+
+    /* contato section */
+    #contato{
+        padding: 4rem 1.5rem 3rem;
+    }
+
+    .form-container{
+        padding: 1.5rem;
+        box-shadow: none;
+    }
+
+    .form-container > span{
+        font-size: .75rem;
+        letter-spacing: 2px;
+    }
+
+    .form-container > h2{
+        font-size: 1.75rem;
+    }
+
+    /* footer section */
+    footer{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer h4{
+        font-size: 1rem;
+    }
+
+    footer p{
+        font-size: .75rem;
+    }
+
+    .footer-container{
+        padding: 0 1.5rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    /* utility classes */
+    .btn-principal,
+    .btn-secundario{
+        font-size: .75rem !important;
+        padding: .5rem 1rem;
+    }
+
+    #hero .div-btn,
+    #sobre .div-btn{
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
     }
 }
