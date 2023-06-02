@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,48 +9,52 @@
     <link rel="shortcut icon" media="(prefers-color-scheme: dark)" href="img/favicon-light.png" type="image/x-icon">
     <link rel="shortcut icon" media="(prefers-color-scheme: light)" href="img/favicon-dark.png" type="image/x-icon">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Mariano Baldini Advogados</title>
 </head>
+
 <body>
     <section id="hero">
-        <header>
+        <nav class="navbar">
             <div class="logo-container">
                 <a href="#hero">
-                    <img src="img/logo-horizontal-branco-transparente.png" class="logo" alt="logo Mariano Baldini Advogados">
+                    <img src="img/logo-horizontal-branco-transparente.png" class="logo"
+                        alt="logo Mariano Baldini Advogados">
                 </a>
             </div>
-            <div class="content-container">
-                <div class="content">
-                    <a href="mailto:contato@mbaldiniadv.com.br" target="_blank">
-                        <i class="bi bi-envelope icone"></i>
-                        contato@mbaldiniadv.com.br
-                    </a>
-                </div>
-                <div class="content">
-                    <a href="https://wa.me/5511993000766" target="_blank">
-                        <i class="bi bi-telephone icone"></i>
-                        (11) 99300-0766
-                    </a>
-                </div>
+
+            <div class="links-container">
+                <ul class="reset-ul-style">
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">Sobre</a></li>
+                    <li><a href="#servicos">Áreas de atuação</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
             </div>
+
             <div class="icon-container">
-                <a href="https://www.instagram.com/drweberty/" class="header-icon" target="_blank">
+                <a href="https://www.facebook.com/profile.php?id=100088523695652&mibextid=ZbWKwL" class="header-icon"
+                    target="_blank" title="facebook">
+                    <i class="bi bi-facebook icone"></i>
+                </a>
+                <a href="https://www.instagram.com/drweberty/" class="header-icon" target="_blank"
+                    title="instagram">
                     <i class="bi bi-instagram icone"></i>
                 </a>
-                <a href="https://wa.me/5511993000766" class="header-icon" target="_blank">
+                <a href="https://wa.me/5511993000766" class="header-icon" target="_blank" title="whatsapp">
                     <i class="bi bi-whatsapp icone"></i>
                 </a>
             </div>
-        </header>
+        </nav>
 
         <div class="hero-container">
             <div class="titulo-container">
-                <span>Seja bem-vindo</span>
+                <!-- <span>Seja bem-vindo</span> -->
                 <h1>MARIANO BALDINI ADVOGADOS</h1>
-                <p>Mantendo a excelência, confiança e transparência para clientes satisfeitos sempre!</p>
+                <p>Serviços jurídicos de reconhecida excelência e atendimento personalizado!</p>
 
                 <div class="div-btn">
                     <a href="#sobre">
@@ -59,7 +64,8 @@
             </div>
 
             <div class="img-container">
-                <img src="img/estatua.png" alt="símbolo da justiça - mulher segurando uma balança simbolizando o equilíbrio dos poderes">
+                <img src="img/estatua.png"
+                    alt="símbolo da justiça - mulher segurando uma balança simbolizando o equilíbrio dos poderes">
             </div>
         </div>
     </section>
@@ -70,18 +76,24 @@
                 <span>SOBRE NÓS</span>
                 <h2>Quem somos e o que fazemos?</h2>
                 <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel omnis molestias eligendi incidunt? Explicabo a sed illo autem sunt. Consequuntur blanditiis quae voluptatem fugit sequi iusto aliquam, facilis corporis est.
+                    Fundado em 2017, o MB Advogados cresceu rapidamente, tornando-se uma referência no mercado jurídico.
+                    Somos uma equipe dinâmica e altamente qualificada, comprometida em fornecer serviços jurídicos de
+                    excelência e atendimento personalizado.
                 </p>
 
                 <div class="div-btn">
                     <a href="#servicos">
                         <button class="btn-secundario">SERVIÇOS</button>
                     </a>
-                </div>
-            </article class="sobre-img">
+
+                    <!-- Button trigger modal -->
+                    <button type="button" class="btn-ler-mais" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                        Ler mais...
+                    </button>
+            </article>
 
             <article class="sobre-img">
-                <img src="img/sobre-img.jpg">
+                <img src="img/sede-mbadvogados.jpg">
             </article>
         </section>
 
@@ -92,58 +104,569 @@
 
             <div class="cards-container">
                 <article class="card">
-                    <div class="titulo-card-container">
-                        <i class="bi bi-card-checklist icone"></i>
-                        <h3>Texto Em Destaque</h3>
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel1-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="true"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Administrativo
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel1-title" 
+                            aria-hidden="true" 
+                            id="panel1-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Temos uma equipe de advogados altamente experientes em Direito Administrativo, com especialização em questões relacionadas à Regulação e Infraestrutura. Além disso, contamos com profissionais de apoio dedicados que monitoram as ações dos órgãos governamentais em âmbito federal, estadual e municipal, garantindo que os interesses dos nossos clientes sejam devidamente atendidos.</p>
+                                <p>Nossa equipe acompanha de perto as decisões tomadas por agências e instituições reguladoras e fornece orientação em assuntos como licitações, Parcerias Público-Privadas (PPPs), concessões e permissões concedidas pelo Poder Público, arbitragem no setor público e funcionamento de diversos órgãos administrativos e fiscalizadores.</p> 
+                                <p>Acreditamos na importância de nossa atuação adaptada para lidar com as particularidades e incertezas inerentes às relações com entidades públicas. Dessa forma, buscamos fornecer soluções jurídicas eficazes, considerando as diversas nuances e complexidades do contexto regulatório, administrativo e empresarial.</p>
+                            </div>
+                        </div>
                     </div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis nihil quis assumenda a? Vitae, nostrum, asperiores, eos delectus perferendis dignissimos animi qui itaque maiores corporis quidem illo inventore id molestiae!
-                    </p>
                 </article>
+                
                 <article class="card">
-                    <div class="titulo-card-container">
-                        <i class="bi bi-card-checklist icone"></i>
-                        <h3>Texto Em Destaque</h3>
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel2-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Compliance
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel2-title" 
+                            aria-hidden="true" 
+                            id="panel2-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Nossa área de compliance é composta por uma equipe altamente qualificada, experiente e eficiente. Temos profissionais especializados em diversas disciplinas, o que nos permite oferecer um suporte completo aos nossos clientes.</p>
+                                <p>Nossas atividades abrangem uma ampla gama de serviços de compliance. Podemos auxiliar na implementação de programas de compliance, realizando um mapeamento detalhado dos riscos específicos de cada organização. Além disso, desenvolvemos políticas e procedimentos internos personalizados, adaptados às necessidades de cada cliente.</p>
+                                <p>No que concerne as análises para identificação de fraude corporativa, utilizamos técnicas e métodos eficazes para identificar e lidar com possíveis irregularidades. Oferecemos treinamento especializado para os profissionais das empresas, visando a conscientização e o cumprimento das normas e regulamentos cuidadosos.</p>
+                                <p>Nossa equipe de compliance também está preparada para lidar com situações de crise, fornecendo orientações estratégicas e soluções para minimizar os impactos e garantir a continuidade das operações empresariais.</p>
+                                <p>Além disso, atuamos em diversas áreas específicas de compliance, incluindo Anticorrupção, Antitruste, Trabalhista, Ambiental e Financeiro.</p>
+                                <p>Nosso compromisso é auxiliar as empresas na gestão eficiente e ética de seus negócios, garantindo o cumprimento de todas as obrigações legais e éticas.</p>
+                            </div>
+                        </div>
                     </div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis nihil quis assumenda a? Vitae, nostrum, asperiores, eos delectus perferendis dignissimos animi qui itaque maiores corporis quidem illo inventore id molestiae!
-                    </p>
                 </article>
+
                 <article class="card">
-                    <div class="titulo-card-container">
-                        <i class="bi bi-card-checklist icone"></i>
-                        <h3>Texto Em Destaque</h3>
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel3-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Consumidor
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel3-title" 
+                            aria-hidden="true" 
+                            id="panel3-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Possuímos a qualificação e experiência necessárias para prestar assessoria às empresas em suas relações com consumidores e autoridades pertinentes, como o Ministério Público, a Secretaria Nacional do Consumidor (Senacon) e o Poder Judiciário. Dentro dessa área, nossa equipe especializada em direito do consumidor auxilia as empresas em procedimentos de recall, oferece consultorias e defende os interesses das empresas em processos administrativos perante a Senacon/Procons, bem como em processos judiciais que abrangem desde questões simples até as mais complexas. Além de possuirmos ampla experiência em conflitos relacionados a essa área, também enfatizamos nossa atuação consultiva, fornecendo orientação jurídica que visa análises, boas práticas e programas de compliance, com o objetivo de encontrar um equilíbrio entre a aplicação das normas e a melhoria do ambiente de negócios.</p>
+                            </div>
+                        </div>
                     </div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis nihil quis assumenda a? Vitae, nostrum, asperiores, eos delectus perferendis dignissimos animi qui itaque maiores corporis quidem illo inventore id molestiae!
-                    </p>
                 </article>
+
                 <article class="card">
-                    <div class="titulo-card-container">
-                        <i class="bi bi-card-checklist icone"></i>
-                        <h3>Texto Em Destaque</h3>
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel4-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Constitucional e Eleitoral
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel4-title" 
+                            aria-hidden="true" 
+                            id="panel4-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>A atuação em questões constitucionais tem se tornado cada vez mais importante no cenário jurídico do país. Isso ocorre tanto por meio da apresentação de ações constitucionais, como também pela promoção de ações de controle de constitucionalidade e participação como amicus curiae. Além dos agentes públicos, casos envolvendo agentes privados têm se tornado comuns na prática jurídica nacional, especialmente quando se trata de defender direitos e garantias fundamentais, além de lidar com processos legislativos e participar de comissões parlamentares de inquérito - CPIs. Nosso escritório conta com uma equipe jurídica especializada no tratamento de questões eleitorais e políticas, composta por advogados com ampla experiência em campanhas nacionais e estaduais, assim como no manejo de processos de natureza política, como ações de improbidade administrativa.</p>
+                            </div>
+                        </div>
                     </div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis nihil quis assumenda a? Vitae, nostrum, asperiores, eos delectus perferendis dignissimos animi qui itaque maiores corporis quidem illo inventore id molestiae!
-                    </p>
                 </article>
+
                 <article class="card">
-                    <div class="titulo-card-container">
-                        <i class="bi bi-card-checklist icone"></i>
-                        <h3>Texto Em Destaque</h3>
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel5-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Contratos
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel5-title" 
+                            aria-hidden="true" 
+                            id="panel5-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>A equipe de Contratos do MB Advogados dedica-se à elaboração, negociação e revisão de contratos empresariais complexos, tanto em âmbito nacional quanto internacional. Nossos serviços abrangem desde a estruturação de modelos de negócios até as demandas diárias essenciais para o funcionamento das empresas, incluindo a avaliação e o gerenciamento de riscos.</p>
+                                <p>Nossos profissionais se destacam pelo interesse em compreender as atividades desenvolvidas pelos clientes, combinando diversas expertises, como engenharia, administração de empresas e economia, para fornecer orientações jurídicas que propõem soluções adequadas ao negócio e práticas.</p>
+                                <p>Contamos com especialização em diversos tipos de contratos, como fornecimento, distribuição comercial, agência, franquia, serviços diversos e empreitada. Além disso, somos experientes na combinação de diferentes modelos contratuais para a estruturação de projetos mais complexos, como construção e expansão de plantas industriais (EPC/EPS), estruturas auxiliares (armazéns e depósitos) e logísticas, abrangendo operações rodoviárias e terminais portuários. Nossos profissionais também possuem ampla atuação na área de tecnologia, incluindo a estruturação de redes contratuais em projetos de ciências da vida e plataformas digitais.</p>
+                                <p>Além da expertise técnica, nossa equipe está preparada para auxiliar os clientes na gestão jurídica de projetos e na rotina de contratos. Isso inclui a alimentação de sistemas de controle, levantamento de dados, acompanhamento de produtividade e eficiência, recorrências e outras atividades relacionadas.</p>
+                            </div>
+                        </div>
                     </div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis nihil quis assumenda a? Vitae, nostrum, asperiores, eos delectus perferendis dignissimos animi qui itaque maiores corporis quidem illo inventore id molestiae!
-                    </p>
                 </article>
+
                 <article class="card">
-                    <div class="titulo-card-container">
-                        <i class="bi bi-card-checklist icone"></i>
-                        <h3>Texto Em Destaque</h3>
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel6-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Contencioso e Consultivo Cível
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel6-title" 
+                            aria-hidden="true" 
+                            id="panel6-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Nossa abordagem interdisciplinar nos permite lidar com demandas complexas no âmbito do contencioso e do consultivo cível, aproveitando o conhecimento de diversas áreas e profissionais. Nosso compromisso é com resultados, fornecendo a melhor solução técnica e prática para nossos clientes, sob uma perspectiva estritamente empresarial.</p>
+                                <p>Contamos com tecnologia de ponta, o que nos permite ter uma alta produtividade, além de gestão e controle eficientes em demandas de grande volume, especialmente em assuntos relacionados às relações de consumo, cobrança e execuções de títulos. Nossa experiência em lidar com grandes carteiras ao longo dos anos nos permite garantir uma atuação diferenciada, pois compreendemos o que é importante para nossos clientes.</p>
+                                <p>Nosso foco está em conduzir os processos de maior complexidade, sejam eles de natureza técnica ou jurídica, por advogados com maior senioridade, garantindo o tratamento diferenciado que cada caso demanda. Mantemos um constante diálogo e alinhamento com nossos clientes, fornecendo relatórios freqüentes sobre o andamento dos processos.</p>
+                            </div>
+                        </div>
                     </div>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Officiis nihil quis assumenda a? Vitae, nostrum, asperiores, eos delectus perferendis dignissimos animi qui itaque maiores corporis quidem illo inventore id molestiae!
-                    </p>
+                </article>
+
+                <article class="card">
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel7-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Condominial
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel7-title" 
+                            aria-hidden="true" 
+                            id="panel7-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Oferecemos assessoria técnica e jurídica especializada para Condomínios, Síndicos e Administradoras, visando auxiliá-los na tomada de decisões estratégicas de forma rápida e com segurança jurídica.</p>
+                                <p>Dentre os serviços que oferecemos estão: (a) Análise e elaboração de contratos, (b) Acompanhamento e Orientação em assembléias, (c) Gestão de conflitos, (d) Regularização documental, (e) Análise da Convenção e Regulamento Interno para eventuais revisões e cumprimentos das normas legais, (f) Atuação na esfera judicial em ações cíveis, trabalhistas, tributárias, (g) Pareceres técnico-jurídicos, entre outros.</p>
+                                <p>Além dos serviços mencionados anteriormente, também oferecemos suporte na gestão de inadimplência condominial, realizando cobranças extrajudiciais e judiciais com o objetivo de reduzir a inadimplência nos condomínios. Nossa equipe está preparada para atuar de forma eficiente na recuperação de créditos condominiais em atraso. Para isso, adotamos estratégias e medidas adequadas, sempre respeitando as normas legais e garantindo a segurança jurídica do processo.</p>
+                                <p>Nossos serviços de cobrança incluem:</p>
+                                <ol>
+                                    <li>Cobrança extrajudicial: Realizamos a cobrança amigável dos débitos condominiais por meio de comunicações escritas, contatos telefônicos e negociações diretas com os condôminos inadimplentes. Buscamos soluções pacíficas e negociadas para regularização das pendências financeiras.</li>
+                                    <li>Cobrança judicial: Quando necessário, adotamos medidas judiciais para a cobrança dos débitos condominiais em atraso. Nossa equipe irá analisar cada caso individualmente, avaliar a viabilidade e propor ações judiciais cabíveis, como a ação de cobrança, ação de execução ou outras medidas judiciais adequadas.</li>
+                                    <li>Acompanhamento processual: Fornecemos acompanhamento e representação jurídica durante todo o processo judicial de cobrança, garantindo que todos os trâmites legais sejam devidamente cumpridos. Atuamos na defesa dos interesses do condomínio, buscando uma solução favorável para a recuperação dos valores devidos.</li>
+                                    <li>Negociação de acordos: Buscamos sempre a negociação de acordos que sejam vantajosos para o condomínio e para os condôminos inadimplentes. Procuramos soluções que possam viabilizar o pagamento dos débitos de forma parcelada, estabelecendo prazos e condições que sejam razoáveis e adequadas para ambas as partes.</li>
+                                </ol>
+                                <p>Nossa equipe tem ampla experiência na área de cobrança condominial e trabalha com dedicação e eficiência para minimizar a inadimplência e garantir a saúde financeira do condomínio. Estamos comprometidos em buscar as melhores soluções para os desafios enfrentados na gestão de inadimplência condominial, sempre com foco na transparência, ética e resultados satisfatórios para nossos clientes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel8-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Empresarial
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel8-title" 
+                            aria-hidden="true" 
+                            id="panel8-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Elaboramos, revisamos e discutimos contratos empresariais, tais como, contratos de franquia, arrendamento mercantil, alienação fiduciária em garantia, cessão fiduciária de créditos, agenciamento e representação comercial, distribuição, compra e venda, mútuo com ou sem conversibilidade em participação societária, investidor-anjo, sociedade em conta de participação, locação comercial, entre outros.</p>
+                                <p>Oferecemos assessoria e consultoria jurídica relacionadas a títulos de crédito, incluindo cédulas de crédito bancário, debêntures, entre outros. Também prestamos assessoria e consultoria jurídica em questões de marcas e patentes, recuperações judiciais, extrajudiciais e falências. Somos especializados em resolução de conflitos empresariais e societários, atuando tanto de forma extrajudicial, por meio de negociação e mediação, quanto judicialmente e por via arbitral.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel9-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Família, Sucessões e Planejamento Tributário
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel9-title" 
+                            aria-hidden="true" 
+                            id="panel9-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Somos especializados em compreender as pessoas envolvidas em disputas legais, buscando oferecer soluções estratégicas que atendam aos interesses individuais e familiares de forma efetiva. Priorizamos a proteção e preservação do patrimônio familiar, garantindo sua transmissão para as próximas gerações. Em nossa atuação preventiva, realizamos a elaboração de pactos pré-nupciais, contratos de união estável e namoro, medidas cautelares de arrolamento de bens e, especialmente, o planejamento sucessório. Para isso, utilizamos estruturas jurídicas complexas, como sociedades, trusts, fundos bancários, contratos e partilhas em vida, entre outros instrumentos adequados às necessidades específicas.</p>
+                                <p>Em casos litigiosos, oferecemos suporte em ações de divórcio, reconhecimento ou dissolução de união estável, inventário, partilha de bens, ações de alimentos e medidas cautelares. Nosso diferencial reside no trabalho conjunto com as áreas de direito societário e tributário, nas quais temos ampla experiência, além de contarmos com uma equipe de profissionais que une a experiência prática da advocacia com o conhecimento teórico acadêmico. Dessa forma, buscamos garantir uma abordagem abrangente e eficiente para atender às necessidades específicas de cada cliente e proporcionar soluções jurídicas adequadas.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel10-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Imobiliário
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel10-title" 
+                            aria-hidden="true" 
+                            id="panel10-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>O departamento imobiliário do escritório MB Advogados está preparado para fornecer uma assessoria abrangente aos nossos clientes em uma variedade de operações relacionadas ao setor imobiliário. Nossa equipe é composta por profissionais experientes e qualificados em questões tanto rurais quanto urbanas, combinando diversas áreas de expertise para a avaliação de riscos e a estruturação dos negócios. Destacamos nossa atuação consultiva e preventiva como uma de nossas principais características.</p>
+                                <p>Dentre os serviços oferecidos pela nossa equipe, destacam-se a elaboração de contratos de exploração agrícola, aquisição de áreas rurais e ativos biológicos, aquisição de imóveis rurais por estrangeiros, regularização de propriedades e cadastros perante as autoridades competentes. Além disso, atuamos no acompanhamento e na atuação perante registros de imóveis, contratos de loteamentos, incorporação e construção de edifícios, contratos de venda para consumidores finais, incluindo garantias reais e financiamentos. Também temos expertise na estruturação de parcerias e consórcios para empreendimentos imobiliários, elaboração de contratos de construção a preço de custo ou por preço fixo, comodato, locação de áreas comerciais e industriais, como estacionamentos e shopping centers, além de oferecer suporte em operações consorciadas. Adicionalmente, estamos preparados para auxiliar na instituição de garantias e fornecer assessoria na execução extrajudicial de garantias hipotecárias ou de alienação fiduciária, dentre outros serviços. Nossa equipe também está pronta para auxiliar em disputas envolvendo questões imobiliárias e direitos de vizinhança, bem como em operações de fusões e aquisições (M&A) e fundos de investimento que envolvam ativos imobiliários.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel11-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Lei Geral de Proteção de Dados (LGPD)
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel11-title" 
+                            aria-hidden="true" 
+                            id="panel11-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Com a implementação da Lei Geral de Proteção de Dados (LGPD), a questão da proteção de dados tornou-se ainda mais relevante e desafiadora. A conformidade com a LGPD e as práticas de proteção de dados são uma realidade presente nos negócios e no cotidiano. Anteriormente, as preocupações estavam principalmente relacionadas a questões regulatórias e autoridades, mas atualmente, a maturidade em proteção de dados é um diferencial competitivo em processos de concorrência e similares.</p>
+                                <p>Para lidar com essa temática complexa, nossa equipe é composta por profissionais com ampla experiência e conhecimento no assunto, capazes de agregar valor aos negócios por meio da adequação das organizações às exigências legais, regulatórias e de mercado. Oferecemos assessoria jurídica abrangente em questões de proteção de dados, tanto para negócios locais, nacionais quanto internacionais. Estamos preparados para auxiliar nossos clientes na implementação de medidas efetivas de proteção de dados, garantindo a conformidade com as normas vigentes e promovendo a segurança das informações em todas as esferas de atuação.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel12-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Penal
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel12-title" 
+                            aria-hidden="true" 
+                            id="panel12-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Oferecemos suporte jurídico personalizado em todo o território nacional, atuando desde a fase investigatória até o processo criminal. Nossa atuação abrange todas as instâncias, tanto na esfera federal quanto estadual, incluindo o Superior Tribunal de Justiça e o Supremo Tribunal Federal.</p>
+                                <p>Além do trabalho tradicional de litígio nas esferas administrativas e judiciais, também prestamos apoio estratégico aos nossos clientes por meio de aconselhamento jurídico e orientação na tomada de decisões. Elaboramos pareceres jurídicos e sugerimos medidas preventivas para evitar violações legais e responsabilização penal. Também fornecemos suporte no gerenciamento de crises, interagindo com profissionais de outras áreas do conhecimento e oferecendo atendimento em âmbito internacional, quando necessário.</p>
+                                <p>Alicerçamos nossa atuação em princípios éticos, responsabilidade e alta qualidade, combinados com a competência necessária para enfrentar os desafios de cada caso de forma individualizada e única.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel13-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Previdenciário
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel13-title" 
+                            aria-hidden="true" 
+                            id="panel13-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Montamos uma equipe altamente qualificada e especializada em Direito Previdenciário para atender à crescente demanda por esse campo jurídico no Brasil. Reconhecemos que as empresas estão enfrentando cada vez mais impactos econômicos nessa área e, por isso, nossa abordagem jurídica visa minimizar os riscos e os custos para nossos clientes. Nossos serviços se baseiam em uma advocacia preventiva, que inclui orientações estratégicas, revisão de protocolos e estruturação de áreas relacionadas ao tema.</p>
+                                <p>Oferecemos uma variedade de soluções jurídicas, como diagnóstico previdenciário contributivo, avaliação de afastamentos por incapacidade, defesa judicial em ações regressivas, análise de processos concedidos e acompanhamento de processos em andamento ou indeferidos, entre outros. Nosso objetivo é fornecer suporte abrangente e eficaz aos nossos clientes, garantindo que eles estejam bem informados e protegidos no que diz respeito a questões previdenciárias.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel14-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Recuperação de Crédito
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel14-title" 
+                            aria-hidden="true" 
+                            id="panel14-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>A área de Recuperação de Crédito do MB Advogados se destaca por fornecer um atendimento especializado, visando criar a melhor estratégia para cada operação e garantir a recuperação efetiva e rápida dos créditos. Nosso objetivo é permitir que a empresa se livre da obrigação de cobrar os créditos de seus clientes, evitando desgastes interpessoais e obtendo resultados melhores, graças à especialização do nosso escritório nesse assunto.</p>
+                                <p>Nossas atividades abrangem tanto a área administrativa quanto a área jurídica:</p>
+                                <ol>
+                                    <li>Administrativa: Contamos com as melhores ferramentas de mercado para localização de pessoas, além de um sistema de cobrança interligado ao setor jurídico. Também utilizamos sistema de telefonia com URA (Unidade de Resposta Audível), ligações gravadas, relatórios de desempenho e acionamentos, e emitimos e enviamos boletos de forma automatizada. Utilizamos as mais recentes ferramentas disponíveis no mercado para buscar informações sobre bens dos devedores.</li>
+                                    <li>Jurídica: Antes mesmo de iniciar uma demanda judicial, realizamos um trabalho de busca de bens que tem sido fundamental para os excelentes resultados alcançados nos últimos anos pelo escritório. Nossas pesquisas avançadas vão além do óbvio e impulsionam o processo, muitas vezes levando o devedor a formalizar um acordo para solucionar o caso. Quando apropriado para o caso específico, utilizamos medidas coercitivas atípicas, que têm produzido efeitos muito positivos na formalização de acordos.</li>
+                                </ol>
+                                <p>A nossa atuação é destacada em carteiras de cobrança comercial, condominial (Extrajudicial e Judicial), imobiliária (consolidação e execução hipotecária), veículos e em casos de alto valor considerados estratégicos.</p>
+                                <p>clientes, o MB Advogados investe em relacionamento para aproximar as partes, ouvi-las e encontrar a melhor solução. Em vez de apenas realizar a cobrança, buscamos uma negociação rápida e eficaz, adaptada à realidade de nossos clientes e seus negócios.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel15-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Relações Governamentais
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel15-title" 
+                            aria-hidden="true" 
+                            id="panel15-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>O objetivo principal da atuação do MB Advogados, consiste em auxiliar os clientes na defesa de seus interesses perante os Poderes Legislativo e Executivo em âmbito federal, estadual e municipal. Nosso foco está em garantir os direitos civis e políticos de determinados grupos sociais.</p>
+                                <p>Além disso, oferecemos suporte aos departamentos de Public Policy (Políticas Públicas) e Corporate Affairs (Assuntos Corporativos e gestão de crises) das empresas, seja com recursos próprios ou em parceria com agências de comunicação e consultorias econômicas.</p>
+                                <p>Por meio da integração dos serviços jurídicos com a expertise em riscos reputacionais, proporcionamos uma abordagem estratégica que envolve relações governamentais, relações públicas e a gestão estratégica de negócios das empresas. Isso permite o aumento do diálogo entre o setor privado e o setor público, com ações planejadas e fundamentadas em transparência e ética.</p>
+                                <p>Essa integração entre áreas proporciona um ativo valioso para as empresas, permitindo uma melhor compreensão dos riscos legais e reputacionais, além de fortalecer o relacionamento entre o setor privado e o setor público. Dessa forma, conseguimos desenvolver estratégias embasadas e planejadas, que visam a defesa dos interesses dos clientes, bem como a promoção de um diálogo construtivo e transparente entre todos os envolvidos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel16-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Saneamento
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel16-title" 
+                            aria-hidden="true" 
+                            id="panel16-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Unimos nossas competências em diversas áreas do Direito, como Direito Administrativo e Regulatório, Contratos Comerciais, Direito Societário e Resolução de Disputas, com nosso conhecimento e habilidades em áreas correlatas, como economia, finanças e gestão de projetos, para oferecer uma abordagem única e estratégica no campo do Saneamento, alinhada com as melhores práticas de ESG e responsabilidade social corporativa.</p>
+                                <p>Com uma compreensão prática do funcionamento dos órgãos governamentais, como o Ministério Público e os Tribunais de Contas, em todas as suas esferas, priorizamos a resolução eficiente, atuando desde a estruturação e acompanhamento de projetos nessa área, até a mediação de negociações entre os diversos atores públicos e privados envolvidos, incluindo agências reguladoras. Nossa atuação abrange a revisão, redação e formalização de contratos, convênios, licitações, parcerias público-privadas (PPPs) e todos os demais atos necessários para o pleno desenvolvimento dos projetos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel17-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Trabalhista
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel17-title" 
+                            aria-hidden="true" 
+                            id="panel17-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Nossa equipe se destaca por adotar uma abordagem prática e inovadora para auxiliar pessoas e empresas em demandas trabalhistas individuais e coletivas.</p>
+                                <p>Somos especialistas em avaliar e reduzir riscos, agindo de forma proativa para minimizar passivos. Nosso objetivo é oferecer soluções criativas aos nossos clientes, utilizando uma abordagem multidisciplinar para resolver uma ampla variedade de questões.</p>
+                                <p>Reconhecemos a complexidade dos negócios de nossos clientes e sabemos que uma abordagem integrada é fundamental para alcançar os melhores resultados possíveis. Trabalhamos em estreita colaboração com advogados de todas as áreas do MB Advogados, bem como com especialistas de diversas áreas, conforme necessário, para garantir soluções que não se limitem apenas ao aspecto trabalhista, mas que seja a melhor opção para o cliente e seu negócio, por meio de uma visão interdisciplinar.</p>
+                                <p>Ao longo de nossa trajetória, atuamos em diversas ações judiciais, representando clientes de diversos setores da economia, indústria química, farmacêutica, metalúrgica, construção civil, plásticos, tecnologia da informação, estacionamentos, instituições financeiras, varejo, indústria automotiva, condomínios edilícios, entre outros.</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="card">
+                    <div class="card-container">
+                        <div class="titulo-card-container">
+                            <h3 id="panel18-title">
+                                <button 
+                                    class="accordion-trigger"
+                                    aria-expanded="false"
+                                    aria-controls="accordion1-content"
+                                >
+                                    Tributário
+                                </button>
+                            </h3>
+                            <i class="bi bi-chevron-down icone"></i>
+                        </div>
+                        <div 
+                            class="content-card-container" 
+                            role="region" 
+                            aria-labelledby="panel18-title" 
+                            aria-hidden="true" 
+                            id="panel18-content"
+                        >
+                            <div>
+                                <hr>
+                                <p>Com uma formação interdisciplinar que abrange conhecimentos jurídicos, contábeis, econômicos e de gestão fiscal, o Departamento Tributário agrega valor aos negócios dos clientes por meio de planejamentos que visam economizar tributos de maneira segura e legal. Além disso, realizamos estruturações de negócios que buscam otimização fiscal e desempenham um papel estratégico na condução de litígios perante autoridades fiscais e aduaneiras.</p>
+                                <p>No MB Advogados, nosso trabalho é fundamentado na transparência e na construção de uma relação de confiança com os clientes. Estamos preparados para lidar com temas tributários complexos, oferecendo um conhecimento multidisciplinar que está sempre alinhado aos objetivos de negócio de cada cliente. Estamos determinados a fornecer todos os subsídios tributários necessários para solucionar problemas e auxiliar na tomada de decisões, independentemente da complexidade envolvida.</p>
+                            </div>
+                        </div>
+                    </div>
                 </article>
             </div>
 
@@ -179,11 +702,48 @@
         </div>
 
         <div class="divider">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
-                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120"
+                preserveAspectRatio="none">
+                <path
+                    d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z"
+                    class="shape-fill"></path>
             </svg>
         </div>
     </section>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">                            
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title" id="exampleModalLabel">Sobre Nós</h3>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Bem-vindo ao MB Advogados!</p>
+
+                    <p>Fundado em 2017, o MB Advogados cresceu rapidamente, tornando-se uma referência no mercado jurídico. Estamos presentes nos principais centros de negócios do país e nos destacamos pela qualidade e liderança em nossos serviços.</p>
+
+                    <p>Somos uma equipe dinâmica e altamente qualificada, comprometida em fornecer serviços jurídicos de excelência e atendimento personalizado. Nossa atuação abrange diversas áreas do Direito, e estamos sempre prontos para oferecer soluções inovadoras e adaptadas à realidade dos negócios de nossos clientes.</p>
+
+                    <p>No entanto, o que nos torna verdadeiramente únicos é a nossa abordagem humanizada ao atender empresas e seus representantes. Reconhecemos que nossos clientes enfrentam grandes responsabilidades e desafios complexos, e é por isso que nos esforçamos para oferecer um atendimento eficaz, justo e objetivo.</p>
+
+                    <p>Acreditamos na eliminação de burocracias e formalismos desnecessários, agindo de forma ética e transparente em todas as áreas do Direito. Nosso objetivo é fornecer um serviço completo, abrangendo todas as necessidades jurídicas de empresas nacionais e internacionais.</p>
+
+                    <p>Investimos continuamente em recursos tecnológicos de ponta e no aprimoramento constante de nossa equipe, para garantir que possamos oferecer um serviço altamente qualificado. Nossa satisfação está em ver nossos clientes plenamente atendidos e nossos profissionais realizados.</p>
+
+                    <p>No MB Advogados, valorizamos a confiança depositada em nós pelos nossos clientes, e é com essa confiança que continuamos a crescer e a nos destacar. Seja qual for o desafio jurídico que você enfrenta, estamos aqui para ajudar.</p>
+
+                    <p>Entre em contato conosco e descubra como podemos ser o seu parceiro jurídico de confiança.</p>
+                </div>
+                <div class="modal-footer">
+                    <div class="div-btn">
+                        <button type="button" class="btn-secundario" data-bs-dismiss="modal">Voltar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <footer>
         <div class="footer-container">
@@ -196,9 +756,9 @@
                     </a>
                 </div>
                 <div class="content">
-                    <a href="https://wa.me/5511993000766" target="_blank">
+                    <a href="tel:1130905223" target="_blank">
                         <i class="bi bi-telephone icone"></i>
-                        (11) 99300-0766
+                        (11) 3090-5223
                     </a>
                 </div>
             </article>
@@ -228,6 +788,14 @@
         </button>
     </a>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+
+
+    <script src="js/script.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous">
+    </script>
 </body>
+
 </html>

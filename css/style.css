@@ -29,7 +29,7 @@ background: #9e8a19;
 html{
     color-scheme: dark;
     scroll-behavior: smooth;
-    scroll-padding-top: 2rem;
+    scroll-padding-top: 1rem;
 }
 
 body{
@@ -56,25 +56,24 @@ a, a:hover{
 
 /* header section */
 
-header{
+.navbar{
     min-width: 100%;
-    padding: 0 3rem 0 3rem;
+    padding: 0 3rem;
     border-bottom: 2px solid #b39c1a;
     background-color: transparent;
 
     display: flex;
-    justify-content: space-between;
     align-items: center;
 }
 
-.content-container{
-    display: flex;
-    gap: .75rem;
+.logo{
+    max-height: clamp(2rem, 4vw, 4rem);
+    margin: .5rem 0;
 }
 
-.logo{
-    max-height: clamp(2.5rem, 4vw, 4rem);
-    margin: .5rem 0;
+.links-container > ul{
+    display: flex;
+    gap: 1rem;
 }
 
 .icone{
@@ -124,7 +123,7 @@ main{
 /* hero section */
 
 #hero{
-    min-height: 110vh;
+    min-height: 110dvh;
     background-image: url(../img/hero-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -239,67 +238,96 @@ main{
 #servicos > h2{
     font-size: 2.5rem;
     margin: .5rem 0 1.75rem;
-    /* text-decoration: underline;
-    text-decoration-color: #b39c1a;
-    text-decoration-thickness: 2px;
-    text-decoration-skip: spaces; */
+}
+
+#servicos hr{
+    color: #b39c1a;
 }
 
 .logo-servicos{
-    max-width: 150px;
+    width: clamp(100px, calc(150px - 5vw), 200px);
     position: absolute;
     opacity: .5;
     transform: rotate(-30deg);
     right: 50px;
-    top: -10px;
-
+    top: -5px;
     z-index: -1;
 }
 
 .cards-container{
+    counter-reset: areas;
     width: 100%;
     display: grid;
     grid-template-columns: 
-        repeat(auto-fit, minmax(300px, 1fr));
+        repeat(1, 100%);
     place-items: center;
-    gap: 1rem;
+    gap: .75rem;
     margin-bottom: 1.75rem;
 }
 
 .card{
     background-color: #292929;
-    padding: 1rem;
+    padding: 1.25rem;
     text-align: start;
-
-    transition: box-shadow .2s ease-in;
-}
-
-.card:hover{
-    box-shadow: 3px 3px #b39c1a4f;
-}
-
-.card p{
-    margin-top: 1rem;
-    color: #eee;
-}
-
-.card h3{
-    font-size: 1.5rem;
-    color: #eee;
-    margin: 0;
-}
-
-.card .icone{
-    font-size: 2rem;
+    transition: .2s ease-in;
+    max-width: 56.25rem; /*900px*/
 }
 
 .titulo-card-container{
     display: flex;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: space-between;
     gap: 1rem;
 }
 
+.titulo-card-container > h3{
+    font-size: 1.5rem;
+    color: #eee;
+    margin: 0;
+}
+
+.titulo-card-container > h3 > button{
+    text-align: left;
+}
+
+.titulo-card-container > h3::before{
+    counter-increment: areas;
+    content: counter(areas) ". ";
+    color: #b39c1a;
+    font-size: inherit;
+}
+
+.titulo-card-container .icone{
+    font-size: 1.5rem;
+}
+
+.content-card-container{
+    display: grid;
+    grid-template-rows: 0fr;
+    transition: grid-template-rows 400ms ease-in-out;
+}
+
+.content-card-container[aria-hidden="false"] {
+  grid-template-rows: 1fr;
+}
+
+.content-card-container > div{
+    color: #eee;
+    overflow: hidden;
+}
+
+.content-card-container > div > p{
+    margin: 1rem 0 0;
+}
+
+.content-card-container ol{
+    list-style-type: upper-roman;
+}
+
+.accordion-trigger {
+  background: transparent;
+  border: 0;
+}
 /* contato section */
 
 #contato{
@@ -363,7 +391,7 @@ textarea:focus{
 
 footer{
     background-color: #181818;
-    padding: 2.5rem 0 0;
+    padding-block-start: 2.5rem;
     overflow: hidden;
 }
 
@@ -413,7 +441,7 @@ footer{
     transition: text-decoration .1s ease-in;
 }
 
-.reset-ul-style > li::before{
+.footer-contato .reset-ul-style > li::before{
     content: "\2022";
     color: #b39c1a;
     font-weight: bolder;
@@ -438,6 +466,23 @@ footer{
     padding: .75rem 0;
     min-width: 100vw;
 }
+
+/* modal section */
+
+.btn-ler-mais{
+    background-color: transparent;
+    color: #eee;
+    font-weight: 400;
+    font-size: 1rem;
+    text-decoration: underline;
+    border: none;
+}
+
+#exampleModal{
+    background-color: rgba(0, 0, 0, 0.2);
+    color: #181818;
+}
+
 
 /* botão voltar ao topo */
 
@@ -467,6 +512,12 @@ footer{
 }
 
 /* utility classes + keyframes*/
+
+.div-btn{
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
 
 .btn-principal{
     background-color: transparent;
@@ -527,7 +578,8 @@ footer{
 @media only screen and (max-width: 55rem){
     /* header section */
     .content-container,
-    .icon-container{
+    .icon-container,
+    .links-container{
         display: none;
     }
     .logo-container{
@@ -555,7 +607,7 @@ footer{
     }
 
     .titulo-container > h1{
-        font-size: 2.5rem;
+        font-size: clamp(2rem, calc(2.25rem - 5vw), 2.25rem);
     }
 
     .titulo-container > span{
@@ -563,7 +615,7 @@ footer{
     }
 
     .titulo-container > p{
-        font-size: 1rem;
+        font-size: clamp(.75rem, calc(1rem - 5vw), 1rem);
         margin-bottom: 1.5rem;
     }
 
@@ -580,14 +632,14 @@ footer{
     #sobre{
         display: flex;
         flex-direction: column-reverse;
-        padding: 1rem 1.5rem;
+        padding: 1rem 1rem;
 
     }
     .sobre-img > img{
         min-width: 100%;
     }
     .sobre-conteudo{
-        margin-top: -1rem;
+        margin-top: -1.75rem;
     }
 
     .sobre-conteudo > span{
@@ -618,15 +670,25 @@ footer{
 
     .logo-servicos{
         opacity: .3;
-        left: 45%;
+        top: -70px;
+        right: 50%;
+        transform: translate(50%, 50%);
+    }
+
+    .card{
+        padding: .75rem 1rem;
     }
 
     .card h3{
-        font-size: 1.25rem;
+        font-size: 1.125rem;
     }
 
     .card p{
         font-size: .75rem;
+    }
+
+    .titulo-card-container .icone{
+        font-size: 1rem;
     }
 
     /* contato section */
@@ -653,6 +715,8 @@ footer{
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding-block-start: 1.5rem;
+        row-gap: 1rem;
     }
 
     footer h4{
@@ -664,16 +728,23 @@ footer{
     }
 
     .footer-container{
-        padding: 0 1.5rem;
+        padding-block: 1.5rem;
+        width: 100%;
 
         display: flex;
+        justify-content: space-between;
         flex-wrap: wrap;
         gap: 1rem;
     }
 
+    .copyright{
+        min-width: 100vw !important;
+    }
+
     /* utility classes */
     .btn-principal,
-    .btn-secundario{
+    .btn-secundario,
+    .btn-ler-mais{
         font-size: .75rem !important;
         padding: .5rem 1rem;
     }
