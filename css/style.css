@@ -60,8 +60,8 @@ a, a:hover{
     min-width: 100%;
     padding: 0 3rem;
     border-bottom: 2px solid #b39c1a;
-    background-color: transparent;
-
+    background: 
+        linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
     display: flex;
     align-items: center;
 }
@@ -74,6 +74,12 @@ a, a:hover{
 .links-container > ul{
     display: flex;
     gap: 1rem;
+    transition: .3s ease-in-out;
+}
+
+.links-container ul > li:hover{
+    color: #b39c1a;
+    text-decoration: none;
 }
 
 .icone{
@@ -123,7 +129,7 @@ main{
 /* hero section */
 
 #hero{
-    min-height: 110dvh;
+    min-height: 103dvh;
     background-image: url(../img/hero-bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -137,25 +143,35 @@ main{
 }
 
 .titulo-container{
-    padding: 2rem 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
-.titulo-container > span{
-    color: #b39c1a;
+.bg-titulo{
+    padding: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+
+    transform: translateY(calc(-4.5rem + 5vh));
+}
+
+.bg-titulo > h1{
     font-size: 1.5rem;
-    font-weight: bolder;
-}
-
-.titulo-container > h1{
-    font-size: 3.5rem;
-    margin: 1rem 0 1.5rem;
-    border-left: 2px solid #b39c1a;
+    margin: 1rem 0;
+    border-left: 4px solid #b39c1a;
     padding-left: .75rem;
 }
 
-.titulo-container > p{
-    font-size: 1.125rem;
-    margin-bottom: 4rem;
+.bg-titulo > p{
+    font-size: 2.25rem;
+    line-height: 2ch;
+    font-family: 'Playfair', serif;
+}
+
+.bg-titulo > p > span{
+    color: #b39c1a;
+    letter-spacing: normal;
 }
 
 .img-container{
@@ -398,29 +414,35 @@ footer{
 .footer-container{
     padding: 0 1.5rem;
     display: grid;
-    grid-template-columns: repeat(2, 50%);
+    grid-template-columns: repeat(2, 1fr);
     place-items: center;
     gap: 1rem;
+}
+
+.footer-endereco{
+    grid-column: span 2;
+    text-align: center;
+    line-height: 1.7rem;
+}
+
+.footer-endereco > p{
+    color: #b39c1a;
+    line-height: 2.5ch;
 }
 
 .footer-contato{
     align-self: start;
 }
 
-.footer-contato > h4{
-    margin-bottom: 1rem;
+.footer-contato > .content:nth-of-type(1){
+    margin-block-end: .5rem;
 }
 
 .footer-logo{
     display: flex;
     align-items: center;
+    justify-content: center;
     margin-top: 1rem;
-}
-
-.footer-logo > .logo{
-    display: flex;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .links{
@@ -480,9 +502,16 @@ footer{
 
 #exampleModal{
     background-color: rgba(0, 0, 0, 0.2);
-    color: #181818;
+    color: #eee;
 }
 
+.modal-content{
+    background-color: #292929;
+}
+
+.btn-close{
+    color: #eee !important;
+}
 
 /* botão voltar ao topo */
 
@@ -563,6 +592,16 @@ footer{
     color: #b39c1a;
 }
 
+.icon-text{
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+}
+
+.icon-text > p{
+    margin: 0;
+}
+
 @keyframes float {
     0%{
         transform: translateY(0);
@@ -597,26 +636,23 @@ footer{
     }    
 
     .hero-container{
-        padding: 2rem;
+        padding: 1rem;
         grid-template-columns: 1fr;
         gap: 0;
     }
 
-    .titulo-container{
-        padding-top: 1rem;
+    .bg-titulo{
+        padding: 1rem;
+        transform: translateY(0);
     }
 
-    .titulo-container > h1{
-        font-size: clamp(2rem, calc(2.25rem - 5vw), 2.25rem);
+    .bg-titulo > p{
+        font-size: 1.5rem;
     }
 
-    .titulo-container > span{
-        font-size: 1.25rem;
-    }
-
-    .titulo-container > p{
+    .bg-titulo > h1{
         font-size: clamp(.75rem, calc(1rem - 5vw), 1rem);
-        margin-bottom: 1.5rem;
+        margin-block: 1rem;
     }
 
     .img-container > img{
@@ -683,7 +719,9 @@ footer{
         font-size: 1.125rem;
     }
 
-    .card p{
+    .card p,
+    .card ol,
+    .card ul {
         font-size: .75rem;
     }
 
@@ -716,25 +754,42 @@ footer{
         flex-direction: column;
         align-items: center;
         padding-block-start: 1.5rem;
-        row-gap: 1rem;
     }
 
     footer h4{
         font-size: 1rem;
     }
 
-    footer p{
+    footer p,
+    footer a{
         font-size: .75rem;
     }
 
     .footer-container{
-        padding-block: 1.5rem;
+        padding-block-start: 1.5rem;
         width: 100%;
 
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
         gap: 1rem;
+    }
+
+    .footer-endereco{
+        flex-grow: 1;
+    }
+
+    .icon-text{
+        text-align: left;
+        line-height: 2.5ch;
+    }
+
+    .icon-text:not(:last-child){
+        margin-bottom: .5rem;
+    }
+
+    .links > ul{
+        font-size: .75rem;
     }
 
     .copyright{
