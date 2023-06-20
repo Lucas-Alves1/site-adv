@@ -435,12 +435,15 @@ footer{
 }
 
 .footer-contato{
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
     align-self: start;
 }
 
-.footer-contato > .content:not(:last-child){
+/* .footer-contato > .content:not(:last-child){
     margin-block-end: .5rem;
-}
+} */
 
 .footer-logo{
     display: flex;
@@ -660,7 +663,8 @@ footer{
         margin-block: 1rem;
     }
 
-    .img-container{
+    .img-container,
+    .img-container > img{
         display: none;
     }
 
