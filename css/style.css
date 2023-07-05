@@ -415,16 +415,18 @@ footer{
     overflow: hidden;
 }
 
+footer hr{
+    display: none;
+}
+
 .footer-container{
     padding: 0 1.5rem;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     place-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
 }
 
 .footer-endereco{
-    grid-column: span 2;
     text-align: center;
     line-height: 1.7rem;
 }
@@ -434,16 +436,41 @@ footer{
     line-height: 2.5ch;
 }
 
+.endereco-container{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    gap: 1rem;
+    text-align: start;
+    padding-inline: 1rem;
+}
+
+.endereco-container:first-child{
+    flex-grow: 1;
+}
+
+details > summary{
+    font-family: 'Merriweather', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+details > summary::marker{
+    color: #b39c1a;
+}
+
+.linha{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+}
+
 .footer-contato{
     display: flex;
     flex-direction: column;
     gap: .5rem;
     align-self: start;
 }
-
-/* .footer-contato > .content:not(:last-child){
-    margin-block-end: .5rem;
-} */
 
 .footer-logo{
     display: flex;
@@ -467,15 +494,8 @@ footer{
 
 .reset-ul-style > li{
     text-align: left;
+    text-decoration-color: #b39c1a;
     transition: text-decoration .1s ease-in;
-}
-
-.footer-contato .reset-ul-style > li::before{
-    content: "\2022";
-    color: #b39c1a;
-    font-weight: bolder;
-    display: inline-block;
-    width: 1rem;
 }
 
 .reset-ul-style > li:hover{
@@ -769,8 +789,13 @@ footer{
         padding-block-start: 1.5rem;
     }
 
-    footer h4{
+    footer h4,
+    footer summary{
         font-size: 1rem;
+    }
+
+    footer summary{
+        margin-bottom: .5rem;
     }
 
     footer p,
@@ -778,26 +803,30 @@ footer{
         font-size: .75rem;
     }
 
-    .footer-container{
-        padding-block-start: 1.5rem;
-        width: 100%;
-
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 1rem;
+    footer hr{
+        display: block;
+        color: #b39c1a;
     }
 
-    .footer-endereco{
-        flex-grow: 1;
+    .footer-container{
+        padding-top: 1.5rem;
+        width: 100%;
+
+        display: inline-block;
+    }
+
+    .linha{
+        display: block;
+    }
+
+    .endereco-container{
+        display: block;
+        padding: 0;
     }
 
     .icon-text{
         text-align: left;
         line-height: 2.5ch;
-    }
-
-    .icon-text:not(:last-child){
         margin-bottom: .5rem;
     }
 
