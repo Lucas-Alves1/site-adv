@@ -685,24 +685,26 @@
             <span>CONTATO</span>
             <h2>Entre em contato conosco para mais detalhes</h2>
 
-            <div class="mb-3" style="margin-top: 2rem;">
-                <label for="email" class="">Endereço de Email</label>
-                <input type="email" class="form-control" id="email" placeholder="nome@exemplo.com">
-            </div>
+            <form action="send_email.php" method="post">
+                <div class="mb-3" style="margin-top: 2rem;">
+                    <label for="email">Endereço de Email</label>
+                    <input type="email" class="form-control" id="email" name="email" placeholder="nome@exemplo.com" required>
+                </div>
 
-            <div class="mb-3">
-                <label for="assunto" class="">Assunto</label>
-                <input type="text" class="form-control" id="assunto" placeholder="assunto/título">
-            </div>
+                <div class="mb-3">
+                    <label for="assunto">Assunto</label>
+                    <input type="text" class="form-control" id="assunto" name="assunto" placeholder="assunto/título" required>
+                </div>
 
-            <div class="mb-3">
-                <label for="mensagem" class="">Mensagem</label>
-                <textarea class="form-control" id="mensagem" rows="3" placeholder="Sua mensagem aqui"></textarea>
-            </div>
+                <div class="mb-3">
+                    <label for="mensagem">Mensagem</label>
+                    <textarea class="form-control" id="mensagem" name="mensagem" rows="3" placeholder="Sua mensagem aqui" required></textarea>
+                </div>
 
-            <div style="display: flex; justify-content: center; padding-top: 1rem;">
-                <button type="submit" class="btn-principal">ENVIAR</button>
-            </div>
+                <div style="display: flex; justify-content: center; padding-top: 1rem;">
+                    <button type="submit" class="btn-principal">ENVIAR</button>
+                </div>
+            </form>
         </div>
 
         <div class="divider">
