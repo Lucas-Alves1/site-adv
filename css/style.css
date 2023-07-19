@@ -201,6 +201,7 @@ main{
     display: grid;
     grid-template-columns: repeat(2, 50%);
     gap: .75rem;
+    z-index: 10;
 
     transform: translateY(-60px);
 }
@@ -245,7 +246,6 @@ main{
 #servicos{
     text-align: center;
     margin: 2rem 0 2.5rem;
-    isolation: isolate;
     position: relative;
 }
 
@@ -257,7 +257,7 @@ main{
 
 #servicos > h2{
     font-size: 2.5rem;
-    margin: .5rem 0 1.75rem;
+    margin: 1rem 0 1.75rem;
 }
 
 #servicos hr{
@@ -265,13 +265,13 @@ main{
 }
 
 .logo-servicos{
-    width: clamp(100px, calc(150px - 5vw), 200px);
+    width: 300px;
     position: absolute;
     opacity: .5;
     transform: rotate(-30deg);
     right: 50px;
-    top: -5px;
-    z-index: -1;
+    top: -10%;
+    z-index: -100;
 }
 
 .cards-container{
@@ -539,8 +539,12 @@ details > summary::marker{
     color: #eee;
     font-weight: 400;
     font-size: 1rem;
-    text-decoration: underline;
     border: none;
+    transition: text-decoration .5s ease-in-out;
+}
+
+.btn-ler-mais:hover{
+    text-decoration: underline;
 }
 
 #exampleModal{
@@ -754,8 +758,10 @@ details > summary::marker{
     }
 
     .logo-servicos{
+        width: 
+            clamp(100px, calc(150px + 1vw), 200px);
         opacity: .3;
-        top: -70px;
+        top: -10%;
         right: 50%;
         transform: translate(50%, 50%);
     }
