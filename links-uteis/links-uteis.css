@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz@9..40&family=DM+Serif+Display&family=Oswald:wght@400;600&family=Source+Sans+3&display=swap');
 
 /* scrollbar config */
 ::-webkit-scrollbar {
@@ -29,35 +29,38 @@ background: #9e8a19;
 html{
     color-scheme: dark;
     scroll-behavior: smooth;
+    scroll-padding-top: 1rem;
 }
 
 body{
     background: #181818;
-    font-family: 'Merriweather', serif;
+    font-family: 'DM Sans', sans-serif;
     font-size: 14px;
     color: #eeeeee;
-    line-height: 1.5rem;
+    line-height: 1.3rem;
 }
 
 h1, h2, h3{
-    font-family: 'Playfair', serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 400;
 }
 
-a, a:hover{
-    text-decoration: none;
-    color: inherit;
+span{
+    letter-spacing: 4px;
 }
 
-span{
-    letter-spacing: 5px;
+a, a:hover,
+#servicos a, 
+#servicos a:hover{
+    text-decoration: none;
+    color: inherit;
 }
 
 /* navbar section */
 
 .navbar{
     min-width: 100%;
-    padding: 0 3rem;
+    padding: 0 4rem;
     border-bottom: 2px solid #b39c1a;
     background: 
         linear-gradient(to bottom, rgba(0, 0, 0, 0.6), transparent);
@@ -65,9 +68,26 @@ span{
     align-items: center;
 }
 
+.container-fluid {
+    padding: 0;
+}
+
+.nav-link{
+    color: #eee;
+    transition: .3s ease-in-out;
+}
+
+.nav-link:hover{
+    color: #b39c1a;
+    text-decoration: none;
+}
+
+.navbar-toggler {
+    color: #b39c1a;
+}
+
 .logo{
-    max-height: clamp(2rem, 4vw, 4rem);
-    margin: .5rem 0;
+    max-height: 5rem
 }
 
 .icone{
@@ -78,7 +98,7 @@ span{
 .icon-container{
     display: flex;
     gap: 1rem;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
 }
 
@@ -111,7 +131,7 @@ span{
 /* hero section */
 
 #hero{
-    min-height: 60vh;
+    min-height: 70vh;
     background-image: url(../img/bg-contato.jpg);
     object-fit: cover;
 
@@ -139,7 +159,7 @@ span{
 
 main{
     margin: 0 4rem;
-    padding-bottom: 1.5rem;
+    padding: 1.5rem 0;
     text-align: center;
 }
 
@@ -156,6 +176,16 @@ main > h2{
 
 main hr{
     color: #b39c1a;
+}
+
+.logo-servicos{
+    width: 300px;
+    position: absolute;
+    opacity: .5;
+    transform: rotate(-30deg);
+    right: 50px;
+    bottom: -50px;
+    z-index: -100;
 }
 
 /* cards section */
@@ -175,7 +205,7 @@ main hr{
     padding: 1.25rem;
     text-align: start;
     transition: .2s ease-in;
-    width: min(100%, 56.25rem);
+    width: min(100%, 60rem);
 }
 
 .titulo-card-container{
@@ -217,6 +247,7 @@ main hr{
 .content-card-container > div > a{
     margin: 1rem 0 0;
     transition: color .1s ease-in-out;
+    text-decoration: underline;
 }
 
 .content-card-container > div > a:hover{
@@ -229,6 +260,37 @@ main hr{
 }
 
 
+/* botão voltar ao topo */
+
+.voltar-ao-topo{
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    z-index: 10;
+    width: 50px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    background: #16c207;
+    border: none;
+    transition: bottom ease-in-out .3s;
+
+    display: grid;
+    place-items: center;
+    
+
+    box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.37);
+    -webkit-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.37);
+    -moz-box-shadow: 10px 10px 5px -8px rgba(0,0,0,0.37);
+}
+
+.voltar-ao-topo:hover{
+    bottom: 25px;
+}
+
+.voltar-ao-topo > .icone{
+    color: #fff;
+}
+
 
 /* footer section */
 
@@ -238,19 +300,22 @@ footer{
     overflow: hidden;
 }
 
+footer h4{
+    font-family: 'Oswald', sans-serif;
+}
+
 footer hr{
     display: none;
 }
 
 .footer-container{
-    padding: 0 1.5rem;
+    padding: 0 4rem;
     display: grid;
-    place-items: center;
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
 }
 
 .footer-endereco{
-    text-align: center;
     line-height: 1.7rem;
 }
 
@@ -259,36 +324,18 @@ footer hr{
     line-height: 2.5ch;
 }
 
-.endereco-container{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    justify-content: center;
-    gap: 1rem;
-    text-align: start;
-    padding-inline: 1rem;
-}
-
 .endereco-container:first-child{
     flex-grow: 1;
 }
 
-details > summary{
-    font-family: 'Merriweather', serif;
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
+.sociais{
+    justify-self: end;
+    text-align: end;
+
+    padding-top: 6rem;
 }
 
-details > summary::marker{
-    color: #b39c1a;
-}
-
-.linha{
-    display: flex;
-    justify-content: space-evenly;
-    width: 100%;
-}
-
-.footer-contato{
+.footer-item-list{
     display: flex;
     flex-direction: column;
     gap: .5rem;
@@ -302,40 +349,16 @@ details > summary::marker{
     margin-top: 1rem;
 }
 
+.footer-logo > img {
+    max-height: clamp(2rem, 4vw, 4rem);
+}
+
 .links{
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: flex-start;
+    justify-self: end;
 }
 
-.links-uteis > a{
-    transition: text-decoration ease-in-out .3s;
-    text-decoration-color: #b39c1a;
-}
-
-.links-uteis > a:hover{
-    text-decoration: underline;
-    text-decoration-color: #b39c1a;
-    text-decoration-thickness: 2px;
-}
-
-.reset-ul-style{
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.reset-ul-style > li{
-    text-align: left;
-    text-decoration-color: #b39c1a;
-    transition: text-decoration .1s ease-in;
-}
-
-.reset-ul-style > li:hover{
-    text-decoration: underline;
-    text-decoration-color: #b39c1a;
-    text-decoration-thickness: 2px;
+.links > ul > li {
+    text-align: end;
 }
 
 .copyright{
@@ -362,25 +385,39 @@ details > summary::marker{
     margin: 0;
 }
 
+.reset-ul-style{
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
+}
 
-@media only screen and (max-width: 55rem){
+.reset-ul-style > li{
+    text-align: left;
+    text-decoration-color: #b39c1a;
+    transition: text-decoration .1s ease-in;
+}
+
+.reset-ul-style > li:hover{
+    text-decoration: underline;
+    text-decoration-color: #b39c1a;
+    text-decoration-thickness: 2px;
+}
+
+
+@media only screen and (max-width: 61.875rem){
     /* navbar section */
     .navbar{
-        padding: 0;
+        padding: 0 1rem;
+        display: flex;
+        justify-content: space-between;
     }
 
-    .content-container,
-    .icon-container,
-    .links-container{
-        display: none;
+    .icon-container{
+        margin-block: 1rem;
     }
-    .logo-container{
-        width: 100%;
-    }
+
     .logo{
-        display: flex;
-        margin-left: auto;
-        margin-right: auto;
+        max-height: 4rem
     }
 
     /* hero section */
@@ -412,8 +449,17 @@ details > summary::marker{
         font-size: .75rem;
         letter-spacing: 2px;
     }
+
     main > h2{
         font-size: 1.75rem;
+    }
+
+    .logo-servicos{
+        width: 
+            clamp(100px, calc(150px + 1vw), 200px);
+        top: 375px;
+        right: 50%;
+        transform: translate(50%, 50%);
     }
 
     .card{
@@ -462,15 +508,15 @@ details > summary::marker{
     }
 
     .footer-container{
-        padding-top: 1.5rem;
+        padding: 0 1.5rem;
         width: 100%;
 
         display: inline-block;
     }
 
-    .linha{
-        display: block;
-        margin-left: 0;
+    .footer-endereco > h4,
+    .footer-endereco > p{
+        text-align: center;
     }
 
     .endereco-container{
@@ -478,10 +524,23 @@ details > summary::marker{
         padding: 0;
     }
 
+    .sociais{
+        text-align: start;
+        padding-top: 0;
+    }
+
+    .links > ul > li {
+        text-align: start;
+    }
+
     .icon-text{
         text-align: left;
         line-height: 2.5ch;
         margin-bottom: .5rem;
+    }
+
+    .links > ul{
+        font-size: .75rem;
     }
 
     .copyright{
