@@ -1,3 +1,5 @@
+// cards
+
 const accordion = document.querySelector(".cards-container");
 
 accordion.addEventListener("click", (e) => {
@@ -17,7 +19,7 @@ function toggleAccordion(panelToActivate) {
       .setAttribute("aria-expanded", false);
 
     panelToActivate
-      .querySelector(".content-card-container")
+      .querySelector(".content-card-container") 
       .setAttribute("aria-hidden", true);
   } else {
     panelToActivate.querySelector(".accordion-trigger").setAttribute("aria-expanded", true);

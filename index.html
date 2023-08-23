@@ -19,35 +19,47 @@
 
 <body>
     <section id="hero">
-        <nav class="navbar">
-            <div class="logo-container">
-                <a href="index.html">
-                    <img src="img/logo-horizontal-branco-transparente.png" class="logo"
-                        alt="logo Mariano Baldini Advogados">
+        <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="index.html">
+                    <img src="img/logo-quadrado-branco.png" class="logo" alt="logo Mariano Baldini Advogados">
                 </a>
-            </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#hero">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sobre">O Escritório</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#servicos">Áreas de Atuação</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contato">Contato</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="links-uteis/index.html">Links Úteis</a>
+                        </li>
+                    </ul>
 
-            <div class="links-container">
-                <ul class="reset-ul-style">
-                    <li><a href="#hero">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#servicos">Áreas de atuação</a></li>
-                    <li><a href="#contato">Contato</a></li>
-                </ul>
-            </div>
-
-            <div class="icon-container">
-                <a href="https://www.facebook.com/profile.php?id=100088523695652&mibextid=ZbWKwL" class="header-icon"
-                    target="_blank" title="facebook">
-                    <i class="bi bi-facebook icone"></i>
-                </a>
-                <a href="https://www.instagram.com/drweberty/" class="header-icon" target="_blank"
-                    title="instagram">
-                    <i class="bi bi-instagram icone"></i>
-                </a>
-                <a href="https://wa.me/5511993000766" class="header-icon" target="_blank" title="whatsapp">
-                    <i class="bi bi-whatsapp icone"></i>
-                </a>
+                    <div class="icon-container">
+                        <a href="https://www.facebook.com/profile.php?id=100088523695652&mibextid=ZbWKwL" class="header-icon"
+                            target="_blank" title="Nosso Facebook">
+                            <i class="bi bi-facebook icone"></i>
+                        </a>
+                        <a href="https://www.instagram.com/_mbadvogados/" class="header-icon" target="_blank"
+                            title="Nosso Instagram">
+                            <i class="bi bi-instagram icone"></i>
+                        </a>
+                        <a href="https://wa.me/5511993000766" class="header-icon" target="_blank" title="whatsapp">
+                            <i class="bi bi-whatsapp icone"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
         </nav>
 
@@ -55,8 +67,8 @@
             <article class="titulo-container">
 
                 <div class="bg-titulo">
-                    <h1>MB ADVOGADOS</h1>
-                    <p>
+                    <h1 tabindex="0">MB ADVOGADOS</h1>
+                    <p tabindex="0">
                         Conectando o direito às <span>pessoas</span>, aos <span>negócios</span>, ao <span>futuro</span>.
                     </p>
                 </div>
@@ -78,9 +90,9 @@
     <main>
         <section id="sobre">
             <article class="sobre-conteudo">
-                <span>SOBRE NÓS</span>
-                <h2>Quem somos e o que fazemos?</h2>
-                <p>
+                <span>O ESCRITÓRIO</span>
+                <h2 tabindex="0">Quem somos e o que fazemos?</h2>
+                <p tabindex="0">
                     Fundado em 2017, o MB Advogados cresceu rapidamente, tornando-se uma referência no mercado jurídico.
                     Somos uma equipe dinâmica e altamente qualificada, comprometida em fornecer serviços jurídicos de
                     excelência e atendimento personalizado.
@@ -98,14 +110,14 @@
             </article>
 
             <article class="sobre-img">
-                <img src="img/sede-mbadvogados.jpg">
+                <img src="img/sede-mbadvogados.jpg" alt="Foto da faixada do escritório da MAriano Baldini Advogados">
             </article>
         </section>
 
         <section id="servicos">
             <!-- <span>SERVIÇOS</span> -->
-            <h2>Áreas de Atuação</h2>
-            <img src="img/mb-adv-servicos.png" class="logo-servicos" alt="logo MB advogados" aria aria-hidden="true">
+            <h2 tabindex="0">Áreas de Atuação</h2>
+            <img src="img/mb-adv-servicos.png" class="logo-servicos" alt="logo MB advogados" aria-hidden="true">
 
             <div class="cards-container">
                 <article class="card">
@@ -683,7 +695,7 @@
 
     <section id="contato">
         <div class="form-container">
-            <span>CONTATO</span>
+            <span tabindex="0">CONTATO</span>
             <h2>Entre em contato conosco para mais detalhes</h2>
 
             <form action="php/send_email.php" method="post">
@@ -717,6 +729,11 @@
             </svg>
         </div>
     </section>
+
+    <!-- SideBar -->
+    <!-- <div class="sidebar">
+        Texto
+    </div> -->
 
     <!-- Modal -->
     <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -759,104 +776,84 @@
                 <p>Atuação em todo o território nacional e em expansão internacional!</p>
                 
                 <div class="endereco-container">
-                    <div class="cidade">
-                        <details open>
-                            <summary>São Paulo (sede)</summary>
-                            <div class="icon-text">
-                                <i class="bi bi-geo-alt icone"></i>
-                                <a href="https://www.google.com/maps/place/Al.+Rio+Negro,+1030+-+2+andar+sala+206+-+Alphaville,+Barueri+-+SP,+06454-000/@-23.4965503,-46.8482965,17z/data=!4m6!3m5!1s0x94cf023cc4855555:0x3e3c232fe6cb575a!8m2!3d-23.4967471!4d-46.847803!16s%2Fg%2F11lkyd2yhp?entry=ttu">
-                                    Sede: Al. Rio Negro, 1030, Cj 206
-                                </a>
-                            </div>
-                            <div class="icon-text">
-                                <i class="bi bi-geo-alt icone"></i>
-                                <a>23° andar, Corporate, Alphaville, Barueri/SP</a>
-                            </div>
-                        </details>
-                    </div>
-
-                    <div class="cidade">
-                        <details>
-                            <summary>Rio de janeiro</summary>
-                            <p>Em expansão.</p>
-                        </details>
-                    </div>
-
-                    <div class="cidade">
-                        <details>
-                            <summary>Minas Gerais</summary>
-                            <p>Em Expansão.</p>
-                        </details>
+                    <h4>São Paulo (sede)</h4>
+                    <div class="icon-text">
+                        <i class="bi bi-geo-alt icone"></i>
+                        <a href="https://www.google.com/maps/place/Al.+Rio+Negro,+1030+-+2+andar+sala+206+-+Alphaville,+Barueri+-+SP,+06454-000/@-23.4965503,-46.8482965,17z/data=!4m6!3m5!1s0x94cf023cc4855555:0x3e3c232fe6cb575a!8m2!3d-23.4967471!4d-46.847803!16s%2Fg%2F11lkyd2yhp?entry=ttu" target="_blank">
+                            Al. Rio Negro, 1030, 2º Andar, Cj 206, Torre Corporate, Alphaville, Barueri/SP, CEP: 06454-000
+                        </a>
                     </div>
                 </div>
             </article>
 
             <hr>
 
-            <div class="linha">
-                <article class="footer-contato">
-                    <h4>Contato</h4>
-                    <div class="content">
-                        <a href="mailto:contato@mbaldiniadv.com.br" target="_blank">
-                            <div class="icon-text">
-                                <i class="bi bi-envelope icone"></i>
-                                <p>contato@mbaldiniadv.com.br</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content">
-                        <a href="tel:1130905223" target="_blank">
-                            <div class="icon-text">
-                                <i class="bi bi-telephone icone"></i>
-                                <p>(11) 3090-5223</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content">
-                        <a href="https://www.facebook.com/profile.php?id=100088523695652&mibextid=ZbWKwL" target="_blank">
-                            <div class="icon-text">
-                                <i class="bi bi-facebook icone"></i>
-                                <p>Mariano Baldini Advogados</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="content">
-                        <a href="https://wa.me/5511993000766" target="_blank">
-                            <div class="icon-text">
-                                <i class="bi bi-whatsapp icone"></i>
-                                <p>(11) 99300-0766</p>
-                            </div>
-                        </a>
-                    </div>
-                </article>
-
-                <hr>
-
-                <article class="links">
-                    <h4>Navegação Rápida</h4>
-                    <ul class="reset-ul-style">
-                        <li><a href="#hero">Início</a></li>
-                        <li><a href="#sobre">Sobre</a></li>
-                        <li><a href="#servicos">Áreas de Atuação</a></li>
-                        <li><a href="#contato">Contato</a></li>
-                    </ul>
-                </article>
-
-                <hr>
-
-                <article class="links-uteis">
-                    <a href="links-uteis/index.html">
+            <article class="sociais footer-item-list">
+                <h4>Siga-nos</h4>
+                <div class="content">
+                    <a href="https://www.facebook.com/profile.php?id=100088523695652&mibextid=ZbWKwL" target="_blank">
                         <div class="icon-text">
-                            <h4>Links Úteis</h4>
-                            <i class="bi bi-box-arrow-down-right icone"></i>
+                            <i class="bi bi-facebook icone"></i>
+                            <p>Mariano Baldini Advogados</p>
                         </div>
                     </a>
-                </article>
-            </div>
+                </div>
+                <div class="content">
+                    <a href="https://www.instagram.com/_mbadvogados/" target="_blank">
+                        <div class="icon-text">
+                            <i class="bi bi-instagram icone"></i>
+                            <p>_mbadvogados</p>
+                        </div>
+                    </a>
+                </div>
+            </article>
+
+            <hr>
+
+            <article class="atendimento footer-item-list">
+                <h4>Canais de Atendimento</h4>
+                <div class="content">
+                    <a href="https://wa.me/5511993000766" target="_blank">
+                        <div class="icon-text">
+                            <i class="bi bi-whatsapp icone"></i>
+                            <p>(11) 99300-0766</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="mailto:contato@mbaldiniadv.com.br" target="_blank">
+                        <div class="icon-text">
+                            <i class="bi bi-envelope icone"></i>
+                            <p>contato@mbaldiniadv.com.br</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="content">
+                    <a href="tel:1130905223" target="_blank">
+                        <div class="icon-text">
+                            <i class="bi bi-telephone icone"></i>
+                            <p>(11) 3090-5223</p>
+                        </div>
+                    </a>
+                </div>
+            </article>
+
+            <hr>
+
+            <article class="links">
+                <h4>Navegação Rápida</h4>
+                <ul class="reset-ul-style">
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#sobre">O Escritório</a></li>
+                    <li><a href="#servicos">Áreas de Atuação</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="links-uteis/index.html">Links Úteis</a></li>
+                </ul>
+            </article>
         </div>
 
         <article class="footer-logo">
-            <img src="img/logo-horizontal-branco-transparente.png" class="logo" alt="logo Mariano Baldini Advogados">
+            <img src="img/logo-horizontal-branco-transparente.png" alt="logo Mariano Baldini Advogados">
         </article>
 
         <section class="copyright">
@@ -864,9 +861,9 @@
         </section>
     </footer>
 
-    <a href="#hero">
+    <a href="https://wa.me/5511993000766" target="_blank" title="Converse conosco pelo whatsapp">
         <button class="voltar-ao-topo">
-            <i class="bi bi-arrow-up icone"></i>
+            <i class="bi bi-whatsapp icone"></i>
         </button>
     </a>
 
